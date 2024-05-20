@@ -32,4 +32,3 @@ export const unfavoriteRestaurant = async (
     });
 };
 
-revalidatePath("/");
