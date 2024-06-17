@@ -4,10 +4,8 @@ import RestaurantImage from "./restaurants-image";
 import Image from "next/image";
 import { StarIcon } from "lucide-react";
 import DEliveryInfo from "@/app/_components/delivery-info";
-import CategoryItem from "@/app/_components/category-item";
 import ProductList from "@/app/components/product-list";
 import CartBanner from "./cart-banner";
-import { useSession } from "next-auth/react";
 import { authOptions } from "@/app/_lib/auth";
 import { getServerSession } from "next-auth";
 
@@ -15,8 +13,8 @@ import { getServerSession } from "next-auth";
 interface RestaurantPagesProps {
     params:{
         id: string 
-    }
-}
+    };
+};
 
 const RestaurantPages = async ({params:{id}}: RestaurantPagesProps)  => {
     const restaurant = await db.restaurant.findUnique({
